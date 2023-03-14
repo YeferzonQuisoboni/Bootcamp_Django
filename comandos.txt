@@ -1,0 +1,56 @@
+1. Crear entorno
+>>> python -m venv env
+
+2. Activar entorno
+>>> env\Scripts\activate 
+
+3. Instalr Django
+>>> env\Scripts\activate 
+
+4. Revisar version de Django
+>>> python -m django --version
+
+5. Revisar que libreias se tiene onstaladas
+>>> pip freeze 
+
+6. Crear project
+>>> django-admin startproject travel .
+
+7. Abrir project con VS
+>> code . 
+
+8. correr project
+>>> python manage.py runserver
+
+9. Actualizar migraciones
+>>> python manage.py migrate 
+
+10. Crear super user
+>>> python manage.py createsuperuser
+
+11. Crear App
+>>> python manage.py startapp citiesapp
+
+12. Crear modelo y registrar la palicación
+
+13. Crear la migración
+>>> python manage.py makemigrations
+
+14. En este caso salio error por que no se habia instalado la libreia Pillow
+>>> python -m pip install Pillow
+
+15. Aplicar la migración
+>>> python manage.py migrate
+
+16. Crear ciudades (objetos) desde la web
+
+17. Pruebas de obtener info desde el shell
+>>> python manage.py shell
+>>> from citiesapp.models import City
+>>> City.objects.all()
+>>> City.objects.get(id=1)
+>>> City.objects.filter(name='Medellin')
+
+
+
+Libro: two scoops of django libro pdf
