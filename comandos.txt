@@ -31,7 +31,7 @@
 11. Crear App
 >>> python manage.py startapp citiesapp
 
-12. Crear modelo y registrar la palicación
+12. Crear modelo y registrar la aplicación
 
 13. Crear la migración
 >>> python manage.py makemigrations
