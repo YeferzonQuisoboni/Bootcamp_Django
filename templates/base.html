@@ -1,0 +1,31 @@
+{% load static %} <!--Permite cargar o leer los archivos static-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cities</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="js/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}"> <!--Para estilos propios-->
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+        <section class="relative py-20">
+            <div class="container px-4 mx-auto">
+                <div class="max-w-3xl mb-20 mx-auto text-center">
+                    <!--<span class="text-xs text-blue-400 font-semibold"><a href="/products/create">Nuevo producto</a></span>-->
+                    <h2 class="mt-8 mb-10 text-4xl font-semibold font-heading"><a href="/">Ciudades del Mundo</a></h2>
+                </div>
+
+            {% block content %}
+            {% endblock %}
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>

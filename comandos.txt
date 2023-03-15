@@ -51,6 +51,30 @@
 >>> City.objects.get(id=1)
 >>> City.objects.filter(name='Medellin')
 
+18. conectar mi proyecto a una bd  (En caso de error instalar pymysql)
+>>> pip install pymysql 
 
+19. aplicar migraciones 
+>>> python manage.py migrate
+
+20. Crear super user
+>>> python manage.py createsuperuser
+
+
+21. crear FOLDER de settings (BASE, PROD Y LOCAL), esto para tener una confif¿guracon del ambiente local y otro para producción y borrar el archivo settings
+
+
+22. configurar nueva locación del archivo de settings
+>>> python manage.py runserver --settings=settings.local
+
+23. crear archivo MakeFile para resuir comandos ejemplo: run: python manage.py runserver --settings=settings.local
+>>> make run
 
 Libro: two scoops of django libro pdf
+repo: https://github.com/camigomezdev/intro-django
+
+
+modified:   citiesapp/__pycache__/urls.cpython-311.pyc
+modified:   citiesapp/templates/city.html
+
+git commit -m "Se configura proyecto con las configuraciones de seguridad para los ambientes local y producción, eliminando el archivo travel/settings.py y creando settings/local.py, settings/prod.py y settings/base.py. Además se crea archivos base .html y los archivos statics para el proyecto" 
