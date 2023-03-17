@@ -10,6 +10,7 @@
             <div class="col">
                 <div class="jumbotron">
                     <h1 class="display_4">{{ city.name}}</h1>
+                    <span class="inline-block mb-4 text-xs text-gray-500">{{ city.country.name }} <i class="{{ city.country.flag_css }}"></i></span>
                     <hr class="my-4">
                     <p>{{city.description}}</p>
                 </div>
@@ -17,10 +18,21 @@
         </div>
         <hr>
 
+        {% for comment in comments %}
+        <div class="comment">
+            <div class="data">{{comment.created_date}}</div>
+            <strong>{{comment.user}}</strong>
+            <p>{{comment.text}}</p>
+        </div>
+        <hr>
+        {% endfor %}
+
         <div class="container">
             <h2>Leave your comments</h2>
-            <form action="/" method="POST" class="post-form">
-                <p>Este es el formulario para agregar los cometarios</p>
+            <form action="{% url 'create_new_comment' id=city.id %}" method="POST" class="post-form">
+                {% csrf_token %}
+                {{ form }}
+                <br>
                 <button type="submit" class="save btn btn-dark">Save</button>
             </form>
         </div>

@@ -25,6 +25,8 @@ SECRET_KEY = 'django-insecure-%-r*y!u#a2pj7d!k4gnujq$^-!-so=gmhv#se-8dczb+nnfj8a
 # Application definition
 
 INSTALLED_APPS = [
+
+    # Django
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -32,6 +34,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Apps de terceros
+    'django_countries',
+
+    # Mis Apps
     'citiesapp',
 ]
 
@@ -111,3 +117,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'

@@ -15,7 +15,7 @@
                 </div>
                 <span class="inline-block mb-4 text-xs text-gray-500">{{ city.created_date }}</span>
                 <h2 class="mb-0 text-2xl font-semibold font-heading">{{ city.name }}</h2>
-                <span class="inline-block mb-4 text-xs text-gray-500">{{ city.country }}</span>
+                <span class="inline-block mb-4 text-xs text-gray-500">{{ city.country.name }}</span>
                 <p class="mb-4 text-gray-500 leading-relaxed">{{ city.description|slice:"150" }} </p>
                 <a class="text-lg font-medium text-yellow-500 underline hover:no-underline" href="{% url 'city' id=city.id %}">Leer mas</a>
                 </div>

@@ -5,7 +5,7 @@
 >>> env\Scripts\activate 
 
 3. Instalr Django
->>> env\Scripts\activate 
+>>> pip install django
 
 4. Revisar version de Django
 >>> python -m django --version
@@ -70,11 +70,13 @@
 23. crear archivo MakeFile para resuir comandos ejemplo: run: python manage.py runserver --settings=settings.local
 >>> make run
 
+formularios
+24. Paso 1. Instalar libreria de paises
+>> pip install django-countries
+
+25. Paso 2 . agregar app en archivo settings.py luego aplicar las migrations, ya que hubo un cambio de modelo
+
+Metabot2021
+
 Libro: two scoops of django libro pdf
 repo: https://github.com/camigomezdev/intro-django
-
-
-modified:   citiesapp/__pycache__/urls.cpython-311.pyc
-modified:   citiesapp/templates/city.html
-
-git commit -m "Se configura proyecto con las configuraciones de seguridad para los ambientes local y producción, eliminando el archivo travel/settings.py y creando settings/local.py, settings/prod.py y settings/base.py. Además se crea archivos base .html y los archivos statics para el proyecto" 
